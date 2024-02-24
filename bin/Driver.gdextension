@@ -7,11 +7,13 @@ macos.debug = "res://Driver/.build/debug/libDriver.dylib"
 macos.release = "res://Driver/.build/release/libDriver.dylib"
 linux.x86_64.debug = "res://Driver/.build/debug/libDriver.so"
 linux.x86_64.release = "res://Driver/.build/release/libDriver.so"
-windows.x86_64.debug = "res://bin/Driver.dll"
+windows.x86_64.debug = "res://Driver/.build/debug/Driver.dll"
+windows.x86_64.release = "res://Driver/.build/release/Driver.dll"
 
 [dependencies]
 macos.debug = {"res://Driver/.build/debug/libSwiftGodot.dylib" : ""}
 macos.release = {"res://Driver/.build/release/libSwiftGodot.dylib" : ""}
 linux.x86_64.debug = {"res://Driver/.build/debug/libSwiftGodot.so" : ""}
 linux.x86_64.release = {"res://Driver/.build/release/libSwiftGodot.so" : ""}
-windows.x86_64.debug = {"res://bin/SwiftGodot.dll" : ""}
+windows.x86_64.debug = {"res://Driver/.build/debug/SwiftGodot.dll" : ""}
+windows.x86_64.release = {"res://Driver/.build/release/SwiftGodot.dll" : ""}
