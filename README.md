@@ -3,11 +3,17 @@ This repo sets up all of that boilerplate to let you jump right in.
 
 [SwiftGodot]: https://github.com/migueldeicaza/SwiftGodot
 
-Setup: copy all of these files directly into your Godot project directory.
+Setup:
+
+1. Copy all of these files directly into your Godot project directory.
+2. Check the version of SwiftGodot in `Driver/Package.swift` and update it if desired.
+
 Development cycle:
 
 1. Open `Driver` in your Swift editor of choice (usually Xcode or VS Code)
 2. Add any newly defined Godot-visible types to `Driver.swift`
 3. Build.
    From the `Driver` directory: `swift build --configuration debug` (building in Xcode puts the built libraries in the wrong directory)
-4. In Godot, Project > Reload Current Project (sometimes not needed e.g., when editing just the implementation of a function)
+4. In Godot, Project > Reload Current Project (sometimes not needed e.g., when editing the implementation of a function)
+5. Check the Output tab in Godot for errors.
+   If you see any scary symbol errors, try reloading the project or changing the SwiftGodot version.
