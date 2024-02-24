@@ -1,0 +1,11 @@
+[configuration]
+entry_symbol = "swift_entry_point"
+compatibility_minimum = 4.2
+
+[libraries]
+macos.debug = "res://Driver/.build/debug/libDriver.dylib"
+macos.release = "res://Driver/.build/release/libDriver.dylib"
+
+[dependencies]
+macos.debug = {"res://Driver/.build/debug/libSwiftGodot.dylib" : ""}
+macos.release = {"res://Driver/.build/release/libSwiftGodot.dylib" : ""}
