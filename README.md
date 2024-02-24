@@ -17,3 +17,7 @@ Development cycle:
 4. In Godot, Project > Reload Current Project (sometimes not needed e.g., when editing the implementation of a function)
 5. Check the Output tab in Godot for errors.
    If you see any scary symbol errors, try reloading the project or changing the SwiftGodot version.
+
+Note that [building on Windows][win] is currently difficult (and extremely slow even when you get it working).
+
+[win]: https://github.com/migueldeicaza/SwiftGodot/issues/299
