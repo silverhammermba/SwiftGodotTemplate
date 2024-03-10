@@ -28,10 +28,15 @@ Setting up for development on Windows is a special kind of hell.
 
        subst S: C:\Users\Whatever\Foobar\GodotProject\Driver
 
-3. Build _only_ from the new virtual drive (Windows hates long paths)
+   Strangely, setting the registry `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem` value `LongPathsEnabled` to `1` does _not_ help.
+   You must actually shorten the path for the build to work.
+
+3. Build _only_ from the new virtual drive
 
        S:
        swift build
+   
+   If you previously tried to build without `subst` you need to completely delete all temporary build files since some contain the unshortened path and Swift won't overwrite them.
 
 4. Copy all Swift `*.dll`s to the same directory as `SwiftGodot.dll` (repeat for debug/release if needed):
 
@@ -40,6 +45,6 @@ Setting up for development on Windows is a special kind of hell.
 [Swift]: https://www.swift.org/install/windows/
 [Developer Mode]: https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
 
-Track further Windows build issues here:
+Track further Windows build issues [here][win].
 
 [win]: https://github.com/migueldeicaza/SwiftGodot/issues/299
